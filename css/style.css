@@ -1,4 +1,163 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+article {
+  width: 210mm;
+  height: 297mm;
+  margin: 0 auto;
+  position: relative;
+}
+
+address {
+  position: absolute;
+  bottom: 8mm;
+  right: 20mm;
+}
+
+h1 {
+  position: absolute;
+  top: 12mm;
+  left: 20mm;
+  width: 128px;
+  height: 128px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 44px 0;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background: url('/img/logo.png') 0 0 no-repeat;
+}
+
+/* Your CSS below here */
+
+h2{
+  font-family: "Archivo Black", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 6em;
+  margin: 0;
+  display: inline-block;
+}
+
+h3{
+  font-family: "Archivo Black", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+h3, h4{
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+p{
+  padding: 0;
+  margin: 0;
+}
+
+.top-image, .bottom-image{
+  width: 100vw;
+  position: absolute;
+  pointer-events: none;
+}
+
+.logo2{
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  display: inline-block;
+}
+
+article{
+  display: flex;
+  flex-direction: column;
+  padding-top: 20vh
+}
+
+.header{
+  position: relative;
+  text-align: center;
+}
+
+hr{
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid lightslategray;
+}
+
+.slogan{
+  width: 100%;
+}
+
+.content{
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-left, .content-right{
+  max-width: 50%;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.content-left{
+  order: 1;
+}
+
+.content-right{
+  order: 2;
+}
+
+form{
+  padding: 20px;
+}
+
+address{
+  position: absolute;
+  bottom: -100px;
+  right: 20px;
+}
+
+.review{
+  padding: 20px;
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-shadow: 0 0 5px lightgray;
+}
+
+button{
+  padding: 10px 20px;
+  background-color: rgb(255, 54, 54);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  margin: 20px;
+  z-index: 10000;
+}
+
+button:hover{
+  background-color: rgb(255, 0, 0);
 }

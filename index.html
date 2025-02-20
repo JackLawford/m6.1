@@ -1,79 +1,73 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <title>Fancy letterheaded paper</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <img src="img/top-image.png" alt="A decorative banner for the page" class="top-image">
+    <article>
+      <h1>An Awesome Company Creation</h1>
 
-<head>
-  <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="img/favicon.ico">
-</head>
+      <div class="header">
+        <div class="title">
+          <h2>
+            Welp
+          </h2>
+          <img src="/img/logo2.png" alt="Welp Logo" class="logo2">
+        </div>
+        <p class="slogan"><i>Real Reviews for Fake Places</i></p>
+      </div>
+      <hr>
+      <div class="content">
+        <div class="content-left">
+          <div id="reviewsContainerLeft"></div>
+          <div id="trendingDestinations">
+            <h3>Trending Destinations</h3>
+            <div class="destination-grid-left">
+                <div class="destination" id="trend1"></div>
+                <div class="destination" id="trend2"></div>
+                <div class="destination" id="trend3"></div>
+            </div>
+          </div>
+        </div>
+        <div class="content-right">
+          <div id="trendingDestinations2">
+            <div class="destination-grid-right">
+              <br><br>
+              <div class="destination" id="trend4"></div>
+              <div class="destination" id="trend5"></div>
+            </div>
+          </div>
+          <div id="reviewsContainerRight"></div>
+          <form id="reviewForm">
+            <h4>Select a Location</h4>
+            <label><input type="radio" name="location" value="The_Moon"> The Moon</label><br>
+            <label><input type="radio" name="location" value="Atlantis"> Atlantis</label><br>
+            <label><input type="radio" name="location" value="The_Backrooms"> The Backrooms</label><br>
+            <label><input type="radio" name="location" value="Deathstar"> The Death Star</label><br>
+            <label><input type="radio" name="location" value="Parallel_Universe"> A Parallel Universe</label><br>
+    
+            <button type="button" id="submitBtn">View Reviews</button>
+        </form>
+        </div>
+      </div>
 
-<body>
-  <h1>HTML Rocks!</h1>
-  <p>
-    <button  onclick="helloWorld()">Prints Hello World to the Developer console</button>
-  </p>
-  <hr>
-  <form id="addForm">
-    <label for="num1">Number 1:</label>
-    <input type="number" id="num1" name="num1" required>
-    <br>
-    <label for="num2">Number 2:</label>
-    <input type="number" id="num2" name="num2" required>
-    <br>
-    <button type="submit">Add Numbers</button>
-  </form>
-
-  <label id="result">Result:</label>
-
-  <hr>
-
-  <button id="jokeButton">Get a Random Joke</button>
-  <p id="joke"></p>
-
-  <script type="module" script="js/main.js">
-    import {helloWorld, add, fetchRandomJoke} from './js/main.js';
-
-    // This shows how to assign a function to the window object
-    // so that it can be called from the browser console
-    window.helloWorld = helloWorld;
-
-    // This shows how to add an event listener to a button in the HTML
-    // and call a function when the button is clicked
-    const form = document.getElementById('addForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const num1 = parseFloat(document.getElementById('num1').value);
-      const num2 = parseFloat(document.getElementById('num2').value);
-      try{
-        const result = add(num1, num2);
-        document.getElementById('result').textContent = `Result: ${result}`;
-      }catch(e){
-        console.error(e);
-        document.getElementById('result').textContent = `Error: ${e.message}`;
-      }
-
-    });
-
-    // this shows how to add an event listener to a button in the HTML
-    // that calls a function that fetches a random joke from an API
-    // and displays it on the page
-    const jokebtn = document.getElementById('jokeButton');
-    const jokeresult = document.getElementById('joke');
-    jokebtn.addEventListener('click', async () => {
-      try {
-        jokeresult.textContent = 'Loading...';
-        const joke = await fetchRandomJoke();
-        document.getElementById('joke').textContent = joke;
-      } catch (e) {
-        console.error(e);
-        document.getElementById('joke').textContent = `Error: ${e.message}`;
-      }
-    });
-  </script>
-
-</body>
-
+      <address>
+        <p>The Awesome Company</p>
+        <p>102-112 Frail Bend Bridge<br>
+        The Dwindlings<br>
+        Little Hornet<br>
+        HX3 9ZQ<br>
+        UK</p>
+      </address>
+    </article>
+    <img src="/img/bottom-image.png" alt="A decorative banner for the page" class="bottom-image">
+  </body>
+  <script src="js/reviews.js"></script>
 </html>
